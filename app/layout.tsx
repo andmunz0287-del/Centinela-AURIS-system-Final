@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { ChatProvider } from "@/components/chat-provider"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
   title: "Centinela AURIS — Seguridad Inteligente",
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={inter.className}>
+    <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
         {children}
         <ChatProvider />
