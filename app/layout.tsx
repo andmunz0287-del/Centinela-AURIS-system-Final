@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
-      <body className={`font-sans antialiased`}>
+    <html lang="es" className={inter.className}>
+      <body className="font-sans antialiased">
         {children}
         <ChatProvider />
         <Analytics />
